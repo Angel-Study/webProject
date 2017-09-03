@@ -49,4 +49,5 @@ $ git rebase master
 $ git commit -am "{작업내용}"
 $ git push origin {작업브랜치명}
 ```
-4. 프로젝트 owner 가 push 한 내용을 merge 해준다.
+4. github > project > branch 에서 "pull Request" 를 생성한다.
+4. 프로젝트 owner 가 request 를 확인해 push 한 내용을 merge 해준다.
