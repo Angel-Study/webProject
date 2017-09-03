@@ -32,13 +32,21 @@ $ cd webProject
 ```
 
 ## project push 정책
-- 모든 contributor 는 로컬에서 개인 branch 를 따서 작업한다.
+1. 모든 contributor 는 로컬에서 개인 branch 를 따서 작업한다.
 ```
 $ cd ~/{path}/webProject
 $ git branch {작업브랜치명}
 ```
-- 프로젝트 작업 후 mater 프로젝트로 push 한다.
+2. push 하기 전에는 항상 로컬 master branch 로 이동해 최신분을 pull 받고, push 하려는 branch 를 최신 상태로 만들어준다.
 ```
+$ git checkout master
+$ git pull
+$ git checkout {작업브랜치명}
+$ git rebase master
+```
+3. remote 프로젝트로 push 한다. (remote 프로젝트의 master 브랜치가 아닌 다른 브랜치로 push)
+```
+$ git commit -am "{작업내용}"
 $ git push origin {작업브랜치명}
 ```
-- 프로젝트 owner 가 push 한 내용을 merge 해준다.
+4. 프로젝트 owner 가 push 한 내용을 merge 해준다.
