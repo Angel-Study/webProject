@@ -1,7 +1,7 @@
-# project contribution 
+# angel study web project
 - 프로젝트에 contribute 하기위해서 project owner 가 contributor 로 추가해줘야한다.
 - 추가하려는 email 은 개인 profile > setting 에서 email 을 공개해줘야한다.
-- contributor 가 되기 위해서 Angel-Study/webProject repository 를 fork 해 .
+- contributor 가 되기 위해서 Angel-Study/webProject repository 를 fork 해야한다.
 
 
 ## git config
@@ -74,3 +74,7 @@ $ git checkout -b {새로운브랜치명}
 # 트래킹 중인 remote branch 가 있는 경우 서버에서 삭제되면 로컬에서도 리모트 브랜치 정보가 삭제됨.
 $ git fetch -p
 ```
+
+## coding convention
+- 개발 tool 은 brackets2 를 사용한다.
+- beautify 플러그인을 설치해 코드 포맷을 맞춘다.(메뉴 > 편집 > beautify 선택) 
