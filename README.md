@@ -61,6 +61,7 @@ $ git commit -am "{작업내용}"
 $ git push origin {작업브랜치명}
 ```
 4. [Angel-Study/webProject](https://github.com/Angel-Study/webProject/pulls)에서 "pull Request" 를 생성한다.
+  - pull Request 의 commit message 를 통해 어떤 이슈에대한 내용을 해결했는지에 대한 태깅을 해준다. ex) resolve #{이슈번호} {커밋내용} 
 5. 프로젝트 owner 가 request 를 확인해 push 한 내용을 머지해준다.
 6. Merge request 이후 머지된 브랜치는 가능한 삭제하고, 새로운 브랜치를 따서 새로운 작업을 진행할 수 있도록 한다.
 ```
