@@ -1,0 +1,75 @@
+특정 브랜치 클론
+git clone -b <branch> <remote_repo>   ex) git clone -b my-branch git@github.com:user/myproject.git
+
+
+로컬저장소의 브랜치 목록 가져오기
+git branch
+
+git branch {브랜치명} (새로운 브랜치를 만든다)
+
+git branch -r (원격 저장소의 브랜치 리스트 가져오기)
+
+git branch -a (모든 브랜치의 리스트 가져오기)
+
+git branch -d {브랜치명} (브랜치를 삭제)
+
+
+브랜치나 태그로 작업트리를 변경
+git checkout {branch명}
+
+git checkout --{파일명} (아직 스테이징이나 커밋을 하지 않은 파일의 변경내용을 취소하고 이전 커밋상태로 돌립니다)
+
+
+현재 설정정보 조회할 수 있습니다. --global옵션은 전역설정에 대한 옵션이며 현재 프로젝트에만 적용할때는 주지 않습니다.
+git config --global --list 
+
+git config --global user.name "사용자명" (사용자명을 등록합니다 (필수))
+git config --global user.email "이메일주소" (이메일 주소를 등록합니다. (필수))
+
+git config --global color.ui “auto”(터미널에 표시되는 메시지에 칼라를 표시해줌)
+
+
+현재 git의 버전을 확인
+git --version
+
+
+현재 디렉토리에 git 저장소를 생성합니다.
+git init
+
+
+git add {옵션} {파일명}
+untracked files의 파일들을 git가 추적하도록 하거나 파일은 수정했지만 아직 스테이징 영역에 올라가지
+않은 파일들을 스테이징 영역에 올립니다. (-p 대화형모드 없이 바로 패치모드를 사용가능)
+
+
+git commit -m "커밋메세지"
+스테이징 영역에 올라가 있는 파일들을 커밋합니다. 
+(-m은 커밋메세지를 주는 옵션) (-a 스테이징에 올리는 작업과 커밋을 동시에 할 수 있다.)
+(-v 편집기에 커밋하려는 변경사항의 다른점을 보여준다.)
+
+
+커밋되지 않은 변경사항을 조회합니다.
+git status
+
+
+원격저장소를 복제하여 저장소를 생성합니다. 폴더명을 생략가능
+git clone {저장소주소} {폴더명}
+
+
+git pull
+git fetch에서 하는 원격저장소의 변경사항을 가져와서 지역브랜치에 합치는 작업을 한거번에 합니다.
+파라미터로 풀링한 원격저장소와 반영할 지역브랜치를 줄 수 있다.
+
+
+git push
+파라미터를 주지 않으면 origin저장소에 푸싱하며 현재 지역브랜치와 같은 이름의 브랜치에 푸싱합니다.
+--dry-run 옵션을 사용하면 푸싱된 변경사항을 확인할 수 있습니다.
+모든 태그를 올리기 위해서 git push origin --tags를 사용
+
+
+새로운 원격 저장소를 추가
+git remote add {이름} {저장소주소}
+
+git remote (추가한 원격저장소의 목록을 확인할 수 있습니다.)
+
+git remote rm {이름} (원격저장소를 제거합니다)
