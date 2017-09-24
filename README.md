@@ -79,3 +79,22 @@ $ git fetch -p
 ## coding convention
 - 개발 tool 은 brackets2 를 사용한다.
 - beautify 플러그인을 설치해 코드 포맷을 맞춘다.(메뉴 > 편집 > beautify 선택) 
+
+## local server config (예 bitnami)
+- bitnami 를 설치하고 설치된 경로(installdir)에 존재하는 bitnami.conf 파일을 연다.
+```
+$ vi installdir/apache2/conf/bitnami/bitnami.conf
+```
+- bitnami.conf 파일에서 아래의 내용을 수정한다.
+  - DocumentRoot 로 시작하는 부분에 있는 경로를 개발중인 디렉토리의 경로로 변경
+  - Directory 로 시작하는 부분에 있는 경로를 개발중인 디렉토리의 경로로 변경
+```
+  변경전 : DocumentRoot "/Applications/mampstack-7.0.23-0/apache2/htdocs"
+  변경후 : DocumentRoot "/Users/song/Desktop/song/workspace/webProject"
+  변경전 : <Directory "/Applications/mampstack-7.0.23-0/apache2/htdocs">
+  변경후 : <Directory "/Users/song/Desktop/song/workspace/webProject"> 
+```
+- http://localhost:9999 로 접속했을때 개발중인 index.html 페이지가 나오면 정상
+ 
+
+
