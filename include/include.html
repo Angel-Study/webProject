@@ -4,7 +4,7 @@
 <head>
     <!--[if lte IE 8]>
 <script>
-  location.replace('../html/support/explorer_upgrade.html');
+  location.replace('http://localhost:9999/html/support/explorer_upgrade.html');
 </script>
 <![endif]-->
     <meta charset="utf-8" />
@@ -82,7 +82,7 @@
     <!-- header -->
     <header>
         <!-- top menu -->
-        <nav>
+        <nav id="top_menu">
             <div id="wrap_nav">
                 <ul class="top_brand">
                     <li><a href="../index.html" name="hanbit_network"><span>HOME</span></a></li>
@@ -94,9 +94,9 @@
                 </ul>
 
                 <ul class="top_menu">
-                    <li><a href="../html/member/login.html" class="login">로그인</a></li>
-                    <li><a href="../html/member/member_agree.html" class="join">회원가입</a></li>
-                    <li><a href="../html/myhanbit/myhanbit.html" class="myhanbit">마이엔젤</a></li>
+                    <li><a href="http://localhost:9999/html/member/login.html" class="login">로그인</a></li>
+                    <li><a href="http://localhost:9999/html/member/member_agree.html" class="join">회원가입</a></li>
+                    <li><a href="http://localhost:9999/html/myhanbit/myhanbit.html" class="myhanbit">마이엔젤</a></li>
                 </ul>
             </div>
         </nav>
@@ -110,10 +110,10 @@
             <!-- Menu -->
             <div id="gnb" name="gnb">
                 <ul>
-                    <li><a href="../html/brand/brand_submain.html" class="">BRAND</a></li>
-                    <li><a href="../html/channel/channel_submain.html" class="">Channel.H</a></li>
-                    <li><a href="../html/support/help_info.html" class="">SUPPORT</a></li>
-                    <li><a href="../html/event/current/current_event_list.html" class="">EVENT</a></li>
+                    <li><a href="http://localhost:9999/html/brand/brand_submain.html" class="">BRAND</a></li>
+                    <li><a href="http://localhost:9999/html/channel/channel_submain.html" class="">Channel.H</a></li>
+                    <li><a href="http://localhost:9999/html/support/help_info.html" class="">SUPPORT</a></li>
+                    <li><a href="http://localhost:9999/html/event/current/current_event_list.html" class="">EVENT</a></li>
 
                     <li id="top_search" class="search"><a href="javascript:;" onClick="view_hover('main_search_area','','show'); $('#keyword_str').focus();"><span>SERACH</span></a></li>
                 </ul>
@@ -225,7 +225,7 @@
 
                     response = JSON.stringify(response);
                     $.each($.parseJSON(response), function(idx, obj) {
-                        depth_html += '<li id="' + obj.cate_cd + '" name="' + str + '" onMouseOver="javascript:depth_list(\'' + cate_str + '\', \'' + obj.cate_cd + '\',\'\');"><a href="../html/store/books/category_list.html?cate_cd=' + obj.cate_cd + '">' + obj.cate_nm + '</a></li>';
+                        depth_html += '<li id="' + obj.cate_cd + '" name="' + str + '" onMouseOver="javascript:depth_list(\'' + cate_str + '\', \'' + obj.cate_cd + '\',\'\');"><a href="http://localhost:9999/html/store/books/category_list.html?cate_cd=' + obj.cate_cd + '">' + obj.cate_nm + '</a></li>';
                     });
                     $("#" + str + "_depth").html("");
                     $("#" + str + "_depth").html(depth_html);
@@ -241,7 +241,7 @@
                 $("#keyword_str").focus();
                 return false;
             } else {
-                $("#gnbsearchfrm").attr("action", "../html/search/search_list.html");
+                $("#gnbsearchfrm").attr("action", "http://localhost:9999/html/search/search_list.html");
                 $("#gnbsearchfrm").submit();
             }
         }
@@ -338,12 +338,12 @@
 
                             <!-- 여기 li에 백그라운드 생상코드가 들어가면 됩니다. -->
                             <li style="background-color:#05294b;">
-                                <a href="../html/event/current/current_event_view.html?hbe_idx=59&page=0" target="_self"><img src="../data/banner/block_1.png" width="" height="340" alt="[리얼타임 TALK 01] 비즈니스 블록체인"></a>
+                                <a href="http://localhost:9999/html/event/current/current_event_view.html?hbe_idx=59&page=0" target="_self"><img src="../data/banner/block_1.png" width="" height="340" alt="[리얼타임 TALK 01] 비즈니스 블록체인"></a>
                             </li>
 
                             <!-- 여기 li에 백그라운드 생상코드가 들어가면 됩니다. -->
                             <li style="background-color:#e2e3e0;">
-                                <a href="../html/store/books/look.php?p_code=B3835033636" target="_self"><img src="../data/banner/main_170810_web.png" width="" height="340" alt="make 드론"></a>
+                                <a href="http://localhost:9999/html/store/books/look.php?p_code=B3835033636" target="_self"><img src="../data/banner/main_170810_web.png" width="" height="340" alt="make 드론"></a>
                             </li>
                         </ul>
                     </div>
@@ -373,10 +373,10 @@
                 <div id="touchSlider_top_network">
                     <ul>
                         <li>
-                            <a href="../html/event/current/current_event_view.html?hbe_idx=58&page=0" target="_self"><img src="../data/banner/banner_1.png"></a>
+                            <a href="http://localhost:9999/html/event/current/current_event_view.html?hbe_idx=58&page=0" target="_self"><img src="../data/banner/banner_1.png"></a>
                         </li>
                         <li>
-                            <a href="../html/store/books/look.php?p_code=B9924952185" target="_self"><img src="../data/banner/ba1.png"></a>
+                            <a href="http://localhost:9999/html/store/books/look.php?p_code=B9924952185" target="_self"><img src="../data/banner/ba1.png"></a>
                         </li>
                         <li>
                             <a href="#" target="_self"><img src="../data/banner/free_570.png"></a>
@@ -403,7 +403,7 @@
         <article class="main_banner">
             <div class="txt">
                 <p>
-                    <a href="../html/publisher/write.html?lang=k" target="_blank">
+                    <a href="http://localhost:9999/html/publisher/write.html?lang=k" target="_blank">
                         <strong>기획/원고 모집</strong><br>
                         <span class="icon_plan"></span><br>
                         <em>참신한 아이디어와 역량있는<br>저자/역자분들을 모십니다.</em>
@@ -415,7 +415,7 @@
         <article class="main_banner">
             <div class="txt">
                 <p>
-                    <a href="../html/academy/professor/index.html">
+                    <a href="http://localhost:9999/html/academy/professor/index.html">
                         <strong>교수전용</strong><br>
                         <span class="icon_professor"></span><br>
                         <em>교재로 채택하신 교수님께<br>교안/보조자료를 제공합니다.</em>
@@ -427,7 +427,7 @@
         <article class="main_banner">
             <div class="txt">
                 <p>
-                    <a href="../html/support/supplement_list.html">
+                    <a href="http://localhost:9999/html/support/supplement_list.html">
                         <strong>자료실</strong><br>
                         <span class="icon_sorce"></span><br>
                         <em>한빛 도서의 부록/예제소스를<br>다운로드하실 수 있습니다.</em>
@@ -450,11 +450,11 @@
                 <!-- //타이틀 -->
 
                 <div class="roadmap_area_thumb">
-                    <a href="../html/media/books/road_map.html?rm_idx=5" target="_self"><img src="../data/banner/brain.jpg"></a>
+                    <a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self"><img src="../data/banner/brain.jpg"></a>
                 </div>
                 <div class="roadmap_area_info">
-                    <p><a href="../html/media/books/road_map.html?rm_idx=5" target="_self">[개앞맵시] 스카이넷도 딥러닝부터</a></p>
-                    <div class="btn"><a href="../html/media/books/road_map.html?rm_idx=5" target="_self">바로가기 <span>&gt;</span></a></div>
+                    <p><a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self">[개앞맵시] 스카이넷도 딥러닝부터</a></p>
+                    <div class="btn"><a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self">바로가기 <span>&gt;</span></a></div>
                 </div>
             </div>
 
@@ -477,7 +477,7 @@
     <!-- //로드맵 및 저자 -->
 
     <!-- 푸터 -->
-    <footer>
+    <footer id="footer">
         <!-- 공지사항 -->
         <div class="foot_notice">
             <span>
@@ -493,11 +493,11 @@
             <div class="foot_menu">
                 <!-- added by coffin -->
                 <ul>
-                    <li><a href="../html/publisher/index.html">회사소개</a> &#149; <a href="http://www.hanbit.co.kr/publisher/index.html?lang=e">ENGLISH</a></li>
-                    <li><a href="../html/publisher/write.html" target="_blank">기획 및 원고 모집</a></li>
-                    <li><a href="../html/member/use_agreement.html">이용약관</a></li>
-                    <li><a href="../html/member/privacy_policy.html"><strong>개인정보취급방침</strong></a></li>
-                    <li><a href="../html/sitemap/sitemap.html">사이트맵</a></li>
+                    <li><a href="http://localhost:9999/html/publisher/index.html">회사소개</a> &#149; <a href="http://www.hanbit.co.kr/publisher/index.html?lang=e">ENGLISH</a></li>
+                    <li><a href="http://localhost:9999/html/publisher/write.html" target="_blank">기획 및 원고 모집</a></li>
+                    <li><a href="http://localhost:9999/html/member/use_agreement.html">이용약관</a></li>
+                    <li><a href="http://localhost:9999/html/member/privacy_policy.html"><strong>개인정보취급방침</strong></a></li>
+                    <li><a href="http://localhost:9999/html/sitemap/sitemap.html">사이트맵</a></li>
                 </ul>
             </div>
             <!-- //하단 메뉴 -->
@@ -534,7 +534,7 @@
 
                     function foot_sch_smit() {
                         var foot_keyword_str = $("#foot_keyword_str").val();
-                        var searchUrl = "../html/search/search_list.html?foot_keyword_str=" + foot_keyword_str;
+                        var searchUrl = "http://localhost:9999/html/search/search_list.html?foot_keyword_str=" + foot_keyword_str;
 
                         if (!foot_keyword_str) {
                             alert("검색어를 입력해주세요");
@@ -566,7 +566,7 @@
         <div class="copyright">&copy;2017- Angelstudy Publishing Network, Inc. All rights reserved.</div>
     </footer>
     <!-- //푸터 -->
-    <div class="foot_download_btn"><a href="../html/support/supplement_list.html">자료실</a></div>
+    <div id="reference_room" class="foot_download_btn"><a href="http://localhost:9999/html/support/supplement_list.html">자료실</a></div>
 
     <!-- 공통 JS 호출 -->
     <script type="text/javascript" src="../js/common.js"></script>
