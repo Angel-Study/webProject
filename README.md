@@ -86,12 +86,17 @@ $ git fetch -p
 $ vi installdir/apache2/conf/bitnami/bitnami.conf
 ```
 - bitnami.conf 파일에서 아래의 내용을 수정한다.
-  - DocumentRoot 로 시작하는 부분에 있는 경로를 개발중인 디렉토리의 경로로 변경
+  - port 변경 (8080 -> 9999) (Host 설정 관련 내용을 모두 9999 로 변경)
+  - DocumentRoot 로 시작하는 부분에 있는 경로를 개발중인 디렉토리의 경로로 변경
   - Directory 로 시작하는 부분에 있는 경로를 개발중인 디렉토리의 경로로 변경
 ```
+  변경전 : NameVirtualHost *:8080
+  변경후 : NameVirtualHost *:9999
+ 
   변경전 : DocumentRoot "/Applications/mampstack-7.0.23-0/apache2/htdocs"
   변경후 : DocumentRoot "/Users/song/Desktop/song/workspace/webProject"
-  변경전 : <Directory "/Applications/mampstack-7.0.23-0/apache2/htdocs">
+
+  변경전 : <Directory "/Applications/mampstack-7.0.23-0/apache2/htdocs">
   변경후 : <Directory "/Users/song/Desktop/song/workspace/webProject"> 
 ```
 - http://localhost:9999 로 접속했을때 개발중인 index.html 페이지가 나오면 정상
