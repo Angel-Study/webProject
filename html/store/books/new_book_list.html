@@ -1,0 +1,111 @@
+<!-- menu start -->
+<style>
+    #subCategory {
+        position: relative;
+        width: 1140px;
+        height: 52px;
+        margin:0 auto;
+    }
+    #subCategory #subCg_rollover {
+        position: absolute;
+        top:130px;
+        width: 200px;
+        display: inline-block;
+        padding-top: 10px;
+    }
+    #subCategory #subCg_list {
+        position:absolute;
+        left:240px;
+        top: 140px;
+    }
+    #subCategory li {
+        display: inline;
+    }
+    #subCg_rollover a {
+        display: block;
+        width: 200px;
+        background-color: #00afa0;
+        padding-left: 40px;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    #subCg_list span {
+        padding: 0 30px;
+        color: #ddd;
+    }
+
+</style>
+<div id="subCategory">
+    <ul id="subCg_rollover">
+        <li>
+            <a href="#">카테고리</a>
+        </li>
+    </ul>
+    <ul id="subCg_list">
+        <li style="padding-left: 30px;"><a href="#">새로나온 책</a></li>
+        <span>l</span>
+        <li><a href="#">베스트셀러</a></li>
+        <span>l</span>
+        <li><a href="#">전체도서목록</a></li>
+        <span>l</span>
+        <li><a href="#">교육</a></li>
+        <span>l</span>
+        <li><a href="#">Item N Maker Shed</a></li>
+    </ul>
+</div>
+<!-- menu end -->
+<!-- new_book_list start -->
+<style>
+    #body_content {
+       position: relative;
+        top:169px;
+       width: 1140px;
+        height: 300px;
+        margin: 30px auto;
+        background-color: aliceblue;
+    }
+    #new_book_area {
+        position: absolute;
+        width: 100%;
+    }
+    #nba_head {
+        display: table;
+    }
+    #nba_head_title, #nba_head_book_page_btn, #nba_head_more_btn {
+        display: table-cell;
+    }
+    #nba_head_title {
+        float: left;
+        width: 500px;
+    }
+    #nba_head_book_page_btn {
+        float: left;
+        width: 590px;
+    }
+    #nba_head_more_btn {
+        float: left;
+    }
+</style>
+<div id="body_content">
+    <section id="new_book_area">
+      <div id="nba_head">
+          <div id="nba_head_title">
+              새로나온 책
+          </div>
+          <div id="nba_head_book_page_btn">
+              <span class="book_page_btn">O</span>
+              <span class="book_page_btn">O</span>
+              <span class="book_page_btn">O</span>
+              <span class="book_page_btn">O</span>
+          </div>
+          <div id="nba_head_more_btn">
+              more+
+          </div>
+      </div>
+        <div id="new_book_thumbnail_list">
+
+        </div>
+    </section>
+</div>
+<!-- new_book_list end -->
