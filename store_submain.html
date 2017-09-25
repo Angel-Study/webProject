@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!--[if lte IE 8]>
+<script>
+  location.replace('../html/support/explorer_upgrade.html');
+</script>
+<![endif]-->
+    <meta charset="utf-8" />
+    <title>엔젤스터디</title>
+    <link rel="shortcut icon" href="http://www.hanbit.co.kr/images/common/hanbit.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="엔젤네트워크" />
+    <meta property="og:description" content="엔젤 스터디 모임" />
+    <meta property="og:image" content="http://www.hanbit.co.kr/images/hanbitpubnet_logo.jpg" />
+    <meta property="og:url" content="http://www.hanbit.co.kr/" />
+    <link rel="canonical" href="http://www.hanbit.co.kr/" />
+    <meta name="keywords" content="책,스터디,모임,엔젤리너스,자바스크립트,노드js,강의" />
+    <meta name="description" content="엔젤 스터디 모임" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="viewport" content="width=1260">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="naver-site-verification" content="823ff8b8e7e3eb396c310703c2bbd731f48c1d9b" />
+    <link rel="stylesheet" href="../css/common.css?v=<%=System.currentTimeMillis() %>" />
+    <link href="../css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="../js/jquery.raty.css?v=<%=System.currentTimeMillis() %>" />
+    <script type="text/javascript" src="../js/jquery-latest.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/jquery.event.drag-1.5.min.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/jquery.raty.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/main.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../lib/cheditor/cheditor.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/jquery.ui.datepicker-ko.js?v=<%=System.currentTimeMillis() %>"></script>
+    <script type="text/javascript" src="../js/engine.js?v=<%=System.currentTimeMillis() %>"></script>
+
+    <!-- Start of help Widget script -->
+    <script>
+        /*<![CDATA[*/
+        window.zEmbed || function(e, t) {
+            var n, o, d, i, s, a = [],
+                r = document.createElement("iframe");
+            window.zEmbed = function() {
+                a.push(arguments)
+            }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+            try {
+                o = s
+            } catch (c) {
+                n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+            }
+            o.open()._l = function() {
+                var o = this.createElement("script");
+                n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
+            }, o.write('<body onload="document._l();">'), o.close()
+        }("https://assets.zendesk.com/embeddable_framework/main.js", "hanbithelp.zendesk.com");
+        /*]]>*/
+    </script>
+    <!-- End of help Widget script -->
+</head>
+
+<body>
+    <div id="a">
+        <link rel="stylesheet" href="../css/layout-angel.css?v=<%=System.currentTimeMillis() %>" />
+        <link rel="stylesheet" href="../css/layout-member.css?v=<%=System.currentTimeMillis() %>" />
+        <link rel="stylesheet" href="../css/layout-network.css?v=<%=System.currentTimeMillis() %>" />
+        <link rel="stylesheet" href="../css/layout-store.css?v=<%=System.currentTimeMillis() %>" />
+        <link rel="stylesheet" href="../css/layout-myhanbit.css?v=<%=System.currentTimeMillis() %>" />
+        <link rel="stylesheet" href="../css/layout-event.css?v=<%=System.currentTimeMillis() %>" />
+        <!-- 메뉴 바로가기 -->
+        <div id="quick_skip_menu">
+            <a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;"><span>메뉴 바로가기</span></a>
+            <a href="#top_search" onclick="view_hover('main_search_area','','show'), document.getElementById('top_search').tabIndex = -1;document.getElementById('top_search').focus();return false;"><span>검색 및 카테고리 바로가기</span></a>
+            <a href="#main_top_box" onclick="document.getElementById('main_top_box').tabIndex = -1;document.getElementById('main_top_box').focus();return false;"><span>프로모션 바로가기</span></a>
+            <a href="#main_book_area" onclick="document.getElementById('main_book_area').tabIndex = -1;document.getElementById('main_book_area').focus();return false;"><span>책 바로가기</span></a>
+            <a href="#main_network_area" onclick="document.getElementById('main_network_area').tabIndex = -1;document.getElementById('main_network_area').focus();return false;"><span>네트워크 바로가기</span></a>
+        </div>
+        <!-- //메뉴 바로가기 -->
+
+        <!-- header -->
+        <header>
+            <!-- top menu -->
+            <nav>
+                <div id="wrap_nav">
+                    <ul class="top_brand">
+                        <li><a href="../index.html" name="hanbit_network"><span>HOME</span></a></li>
+                        <li><a href="http://www.hanbit.co.kr/media/">신승엽</a></li>
+                        <li><a href="http://www.hanbit.co.kr/academy/">송은정</a></li>
+                        <li><a href="http://www.hanbit.co.kr/biz/">박재오</a></li>
+                        <li><a href="http://www.hanbit.co.kr/life/">임지호</a></li>
+                        <li><a href="http://www.hanbit.co.kr/edu/">김관현</a></li>
+                    </ul>
+
+                    <ul class="top_menu">
+                        <li><a href="../html/member/login.html" class="login">로그인</a></li>
+                        <li><a href="../html/member/member_agree.html" class="join">회원가입</a></li>
+                        <li><a href="../html/myhanbit/myhanbit.html" class="myhanbit">마이엔젤</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- //top menu -->
+
+            <div id="wrap_gnb">
+                <!-- logo -->
+                <h1><a href="../index.html">엔젤스터디</a></h1>
+                <!-- //logo -->
+
+                <!-- Menu -->
+                <div id="gnb" name="gnb">
+                    <ul>
+                        <li><a href="../html/brand/brand_submain.html" class="">BRAND</a></li>
+                        <li><a href="../html/channel/channel_submain.html" class="">Channel.H</a></li>
+                        <li><a href="../html/support/help_info.html" class="">SUPPORT</a></li>
+                        <li><a href="../html/event/current/current_event_list.html" class="">EVENT</a></li>
+
+                        <li id="top_search" class="search"><a href="javascript:;" onClick="view_hover('main_search_area','','show'); $('#keyword_str').focus();"><span>SERACH</span></a></li>
+                    </ul>
+                </div>
+                <!-- //Menu -->
+
+                <!-- lnb -->
+                <div class="lnb" style="top:92px;">
+                    <div class="lnb_area">
+                        <!-- BRAND -->
+                    </div>
+                </div>
+                <!--// lnb -->
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- 메인 검색 및 카테고리 영역 -->
+        <div id="main_search_area" class="fixed" style="display:none;">
+            <div class="msa_wrap">
+                <div class="msa_wrap_btn"><a href="javascript:;" onClick="view_hover('main_search_area','','hide')">닫기</a></div>
+
+                <!-- [S]카테고리 -->
+                <div class="msa_wrap_l">
+                    <!-- 카테고리 노출 -->
+                    <p class="tit">카테고리</p>
+                    <ul class="cate_1depth" id="cate1_depth"></ul>
+                    <ul class="cate_3depth" id="cate2_depth"></ul>
+                </div>
+                <!-- [E]//카테고리 -->
+
+
+                <!-- [S]검색 -->
+                <div class="msa_wrap_r">
+                    <p class="txt">제목, 저자, ISBN으로 검색이 가능합니다.</p>
+                    <!-- 검색창 -->
+                    <form name="gnbsearchfrm" id="gnbsearchfrm" method="get" onload="form.keyword_str.focus;">
+
+                        <!-- 선택 카테고리 결과값 -->
+                        <div class="msa_wrap_r_srch">
+                            <fieldset>
+                                <legend>검색영역</legend>
+                                <input title="검색어" class="srch_keyword" accesskey="s" type="text" name="keyword_str" id="keyword_str">
+                                <input type="submit" alt="" class="srch_btn" onclick="sch_smit();" style="cursor:pointer;">
+                            </fieldset>
+                        </div>
+                    </form>
+                    <!-- //검색창 -->
+
+                </div>
+                <!-- [E]//검색 -->
+
+            </div>
+        </div>
+
+        <style>
+            .normal_css {
+                font-weight: normal;
+            }
+            
+            .bold_css {
+                font-weight: bold;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+            //[뎁스1] 브랜드 리스트
+            $(document).ready(function() {
+                depth_list("cate1");
+            });
+
+            // 카테고리 리스트
+            function depth_list(str, cate_cd) {
+                var cate_str;
+
+                if (str == "cate1") cate_str = "cate2";
+                else cate_str = "choice";
+
+
+                //카테고리1 선택
+                if (str == "cate2") {
+                    $("li[name='cate1']").removeClass("bold_css");
+                    $("#" + cate_cd).addClass("bold_css");
+                    $("#sch_cate1").val(cate_cd);
+                    $("#sch_cate2").val("");
+                }
+
+                //카테고리2 선택
+                if (str == "choice") {
+                    $("li[name='cate2']").removeClass("bold_css");
+                    $("#" + cate_cd).addClass("bold_css");
+                    $("#sch_cate2").val(cate_cd);
+                }
+
+
+                //카테고리선택 >> 하위카테고리 데이터 정보
+                var depth_html = "";
+                $.ajax({
+                    type: "post",
+                    url: "/inc/common_top_search_ajax.php",
+                    data: {
+                        depth_attr: str,
+                        cate_cd: cate_cd
+                    },
+                    dataType: "json",
+                    success: function(response) {
+
+                        response = JSON.stringify(response);
+                        $.each($.parseJSON(response), function(idx, obj) {
+                            depth_html += '<li id="' + obj.cate_cd + '" name="' + str + '" onMouseOver="javascript:depth_list(\'' + cate_str + '\', \'' + obj.cate_cd + '\',\'\');"><a href="../html/store/books/category_list.html?cate_cd=' + obj.cate_cd + '">' + obj.cate_nm + '</a></li>';
+                        });
+                        $("#" + str + "_depth").html("");
+                        $("#" + str + "_depth").html(depth_html);
+                    }
+                });
+            }
+
+            // 검색 리스트
+            function sch_smit() {
+
+                if (!$.trim($("#keyword_str").val()).length) {
+                    alert("검색어를 입력해주세요");
+                    $("#keyword_str").focus();
+                    return false;
+                } else {
+                    $("#gnbsearchfrm").attr("action", "../html/search/search_list.html");
+                    $("#gnbsearchfrm").submit();
+                }
+            }
+        </script>
+        <!-- //메인 검색 및 카테고리 영역 -->
+        <link rel="stylesheet" href="http://www.hanbit.co.kr/css/main.css" />
+        <!-- 메인 레이어팝업 컨트롤 영역 -->
+        <style>
+            #main_popup {
+                position: fixed;
+                top: 149px;
+                left: 50%;
+                margin: 0 0 0 -285px;
+                z-index: 10000;
+            }
+            /* margin : 이미지 가로사이즈의 1/2 값을 뺀다. (예시/ 가로 400사이즈 : margin:0 0 0 -200px;) */
+            
+            .main_popup_img {
+                position: relative;
+            }
+            
+            .main_popup_img img {
+                border: 4px solid #222;
+            }
+            
+            .main_popup_btn a {
+                display: block;
+                position: absolute;
+                top: -40px;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                background: #222;
+                font-size: 32px;
+                font-weight: bold;
+                color: #fff;
+                line-height: 40px;
+                text-align: center;
+            }
+        </style>
+
+        <div id="main_popup">
+            <div class="main_popup_img">
+
+            </div>
+            <!-- <div class="main_popup_btn"><a href="javascript:;" onClick="closeTodayPopup();">X</a></div> -->
+        </div>
+
+        <script type="text/javascript">
+            var cookiedata = document.cookie;
+            if (cookiedata.indexOf("HANBIT_MAIN_POP=Y") > 0) {
+                $("#main_popup").css('display', 'none');
+            }
+
+            function closeTodayPopup() {
+                setCookie('HANBIT_MAIN_POP', 'Y', 24);
+                $("#main_popup").css('display', 'none');
+            }
+
+            //레이어 팝업 설정
+            function setCookie(name, value, expirehours) {
+                var todayDate = new Date();
+                todayDate.setHours(todayDate.getHours() + expirehours);
+                document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";domain=.hanbit.co.kr;"
+            }
+
+            function getCookie(name) {
+                var cName = name + "=";
+                var x = 0;
+                while (i <= document.cookie.length) {
+                    var y = (x + cName.length);
+                    if (document.cookie.substring(x, y) == cName) {
+                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie));
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if (x == 0) break;
+                }
+                return "";
+            }
+        </script>
+        
+
+        <!-- 실제 바디(정보영역) -->
+        <div id="new_book_list"></div>
+        <script> $("#new_book_list").load("html/store/books/new_book_list.html");
+        </script>
+        <!-- 푸터 -->
+        <footer>
+            <!-- 공지사항 -->
+            <div class="foot_notice">
+                <span>
+            NOTICE :
+        </span>
+
+                <a href="../support/notice_view.html?hnb_idx=261">엔젤스터디 사이트 제작 안내</a>
+            </div>
+            <!-- //공지사항 -->
+
+            <div class="foot_contents">
+                <!-- 하단 메뉴 -->
+                <div class="foot_menu">
+                    <!-- added by coffin -->
+                    <ul>
+                        <li><a href="../html/publisher/index.html">회사소개</a> &#149; <a href="http://www.hanbit.co.kr/publisher/index.html?lang=e">ENGLISH</a></li>
+                        <li><a href="../html/publisher/write.html" target="_blank">기획 및 원고 모집</a></li>
+                        <li><a href="../html/member/use_agreement.html">이용약관</a></li>
+                        <li><a href="../html/member/privacy_policy.html"><strong>개인정보취급방침</strong></a></li>
+                        <li><a href="../html/sitemap/sitemap.html">사이트맵</a></li>
+                    </ul>
+                </div>
+                <!-- //하단 메뉴 -->
+
+                <!-- SNS -->
+                <div class="foot_sns">
+
+                    <ul>
+                        <li class="foot_facebook"><a href="https://www.facebook.com/" target="_blank"><span>페이스북</span></a></li>
+                        <li class="foot_googleplus"><a href="https://plus.google.com/" target="_blank"><span>구글플러스</span></a></li>
+                        <li class="foot_twitter"><a href="https://twitter.com/" target="_blank"><span>트위터</span></a></li>
+                        <li class="foot_youtube"><a href="https://www.youtube.com/user/" target="_blank"><span>유튜브</span></a></li>
+                        <li class="foot_bolg"><a href="http://blog.naver.com/" target="_blank"><span>블로그</span></a></li>
+                    </ul>
+
+
+
+                    <fieldset class="foot_srch">
+                        <legend>하단 검색영역</legend>
+                        <input title="검색어" class="foot_srch_keyword" accesskey="s" type="text" value="" id="foot_keyword_str" style="font-size:16px;">
+                        <input type="button" alt="" class="foot_srch_btn" onclick="foot_sch_smit();" style="cursor: pointer;">
+                        <!--input type="image" alt="" class="foot_srch_btn" -->
+                    </fieldset>
+
+
+                    <script>
+                        // 검색 리스트
+                        $(document).ready(function() {
+                            $('#foot_keyword_str').keyup(function(e) {
+                                if (e.keyCode == 13)
+                                    foot_sch_smit();
+                            });
+                        });
+
+                        function foot_sch_smit() {
+                            var foot_keyword_str = $("#foot_keyword_str").val();
+                            var searchUrl = "../html/search/search_list.html?foot_keyword_str=" + foot_keyword_str;
+
+                            if (!foot_keyword_str) {
+                                alert("검색어를 입력해주세요");
+                                $("#foot_keyword_str").focus();
+                            } else {
+                                location.href = searchUrl;
+                            }
+                        }
+                    </script>
+
+                </div>
+                <!-- //SNS -->
+
+                <!-- 스터디 정보 -->
+                <div class="foot_about">
+                    <div class="foot_about_area">
+
+                        <p>엔젤스터디㈜ &#149; 스터디㈜</p>
+                        <p>study장소 : 금정역 한대앞역 엔젤리너스</p>
+                        <p>TEL : / FAX : 031-000-0000</p>
+                        <p>멤버 : 신승엽 송은정 박재오 임지호 김관현</p>
+
+                    </div>
+                </div>
+                <!-- //스터디 정보 -->
+            </div>
+
+            <div class="copyright">&copy;2017- Angelstudy Publishing Network, Inc. All rights reserved.</div>
+        </footer>
+        <!-- //푸터 -->
+        <div class="foot_download_btn"><a href="../html/support/supplement_list.html">자료실</a></div>
+
+        <!-- 공통 JS 호출 -->
+        <script type="text/javascript" src="../js/common.js"></script>
+        <!-- //공통 JS 호출 -->
+    </div>
+</body>
+
+</html>
