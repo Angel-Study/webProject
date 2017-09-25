@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--[if lte IE 8]>
+    <script>
+        location.replace('http://localhost:9999/html/support/explorer_upgrade.html');
+    </script>
+    </head>
+    <![endif]-->
+
+    <meta charset="utf-8" />
+    <link name="common">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../../css/common.css?v=<%=System.currentTimeMillis() %>" />
+    <link href="../../css/hover.css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#top_menu").load("../../include/include.html #top_menu");
+            $("#footer").load("../../include/include.html #footer");
+            $("#reference_room").load("../../include/include.html #reference_room");
+        });
+    </script>
+<body>
+    <link rel="stylesheet" href="../../css/layout-angel.css">
+    <link rel="stylesheet" href="../../css/layout-member.css">
+    <link rel="stylesheet" href="../../css/layout-network.css">
+    <link rel="stylesheet" href="../../css/layout-store.css">
+    <link rel="stylesheet" href="../../css/layout-myangel.css">
+    <link rel="stylesheet" href="../../css/layout-event.css">
+
+    <!-- fixed header -->
+    <header>
+        <!-- top menu -->
+        <nav id="top_menu">
+        </nav>
+    
+        <div id="wrap_gnb">    
+            <!-- logo -->
+
+            <!-- menu -->
+            <div class="lnb" style="top:92px">
+                <div class="lnb_area">
+                    <ul class="lnb_depth1">
+                        <li>로그인</li><span>|</span>
+                        <li>아이디 찾기</li><span>|</span>
+                        <li>비밀번호 찾기</li><span>|</span>
+                        <li>회원가입</li><span>|</span>
+                        <li>이용약관</li><span>|</span>
+                        <li>개인정보취급방침</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="container">
+    </div>
+    
+    <footer id="footer">
+    </footer>
+    
+    <div id="reference_room">
+    </div>
+</body>
+</html>
