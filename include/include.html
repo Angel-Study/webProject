@@ -4,7 +4,7 @@
 <head>
     <!--[if lte IE 8]>
 <script>
-  location.replace('../html/support/explorer_upgrade.html');
+  location.replace('http://localhost:9999/html/support/explorer_upgrade.html');
 </script>
 <![endif]-->
     <meta charset="utf-8" />
@@ -62,62 +62,62 @@
 
 <body>
     <div id="a">
-        <link rel="stylesheet" href="../css/layout-angel.css?v=<%=System.currentTimeMillis() %>" />
-        <link rel="stylesheet" href="../css/layout-member.css?v=<%=System.currentTimeMillis() %>" />
-        <link rel="stylesheet" href="../css/layout-network.css?v=<%=System.currentTimeMillis() %>" />
-        <link rel="stylesheet" href="../css/layout-store.css?v=<%=System.currentTimeMillis() %>" />
-        <link rel="stylesheet" href="../css/layout-myhanbit.css?v=<%=System.currentTimeMillis() %>" />
-        <link rel="stylesheet" href="../css/layout-event.css?v=<%=System.currentTimeMillis() %>" />
-        <!-- 메뉴 바로가기 -->
-        <div id="quick_skip_menu">
-            <a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;"><span>메뉴 바로가기</span></a>
-            <a href="#top_search" onclick="view_hover('main_search_area','','show'), document.getElementById('top_search').tabIndex = -1;document.getElementById('top_search').focus();return false;"><span>검색 및 카테고리 바로가기</span></a>
-            <a href="#main_top_box" onclick="document.getElementById('main_top_box').tabIndex = -1;document.getElementById('main_top_box').focus();return false;"><span>프로모션 바로가기</span></a>
-            <a href="#main_book_area" onclick="document.getElementById('main_book_area').tabIndex = -1;document.getElementById('main_book_area').focus();return false;"><span>책 바로가기</span></a>
-            <a href="#main_network_area" onclick="document.getElementById('main_network_area').tabIndex = -1;document.getElementById('main_network_area').focus();return false;"><span>네트워크 바로가기</span></a>
-        </div>
-        <!-- //메뉴 바로가기 -->
+    <link rel="stylesheet" href="../css/layout-angel.css?v=<%=System.currentTimeMillis() %>" />
+    <link rel="stylesheet" href="../css/layout-member.css?v=<%=System.currentTimeMillis() %>" />
+    <link rel="stylesheet" href="../css/layout-network.css?v=<%=System.currentTimeMillis() %>" />
+    <link rel="stylesheet" href="../css/layout-store.css?v=<%=System.currentTimeMillis() %>" />
+    <link rel="stylesheet" href="../css/layout-myhanbit.css?v=<%=System.currentTimeMillis() %>" />
+    <link rel="stylesheet" href="../css/layout-event.css?v=<%=System.currentTimeMillis() %>" />
+    <!-- 메뉴 바로가기 -->
+    <div id="quick_skip_menu">
+        <a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;"><span>메뉴 바로가기</span></a>
+        <a href="#top_search" onclick="view_hover('main_search_area','','show'), document.getElementById('top_search').tabIndex = -1;document.getElementById('top_search').focus();return false;"><span>검색 및 카테고리 바로가기</span></a>
+        <a href="#main_top_box" onclick="document.getElementById('main_top_box').tabIndex = -1;document.getElementById('main_top_box').focus();return false;"><span>프로모션 바로가기</span></a>
+        <a href="#main_book_area" onclick="document.getElementById('main_book_area').tabIndex = -1;document.getElementById('main_book_area').focus();return false;"><span>책 바로가기</span></a>
+        <a href="#main_network_area" onclick="document.getElementById('main_network_area').tabIndex = -1;document.getElementById('main_network_area').focus();return false;"><span>네트워크 바로가기</span></a>
+    </div>
+    <!-- //메뉴 바로가기 -->
 
-        <!-- header -->
-        <header>
-            <!-- top menu -->
-            <nav>
-                <div id="wrap_nav">
-                    <ul class="top_brand">
-                        <li><a href="../index.html" name="hanbit_network"><span>HOME</span></a></li>
-                        <li><a href="http://www.hanbit.co.kr/media/">신승엽</a></li>
-                        <li><a href="http://www.hanbit.co.kr/academy/">송은정</a></li>
-                        <li><a href="http://www.hanbit.co.kr/biz/">박재오</a></li>
-                        <li><a href="http://www.hanbit.co.kr/life/">임지호</a></li>
-                        <li><a href="http://www.hanbit.co.kr/edu/">김관현</a></li>
-                    </ul>
+    <!-- header -->
+    <header>
+        <!-- top menu -->
+        <nav id="top_menu">
+            <div id="wrap_nav">
+                <ul class="top_brand">
+                    <li><a href="../index.html" name="hanbit_network"><span>HOME</span></a></li>
+                    <li><a href="http://www.hanbit.co.kr/media/">신승엽</a></li>
+                    <li><a href="http://www.hanbit.co.kr/academy/">송은정</a></li>
+                    <li><a href="http://www.hanbit.co.kr/biz/">박재오</a></li>
+                    <li><a href="http://www.hanbit.co.kr/life/">임지호</a></li>
+                    <li><a href="http://www.hanbit.co.kr/edu/">김관현</a></li>
+                </ul>
 
-                    <ul class="top_menu">
-                        <li><a href="../html/member/login.html" class="login">로그인</a></li>
-                        <li><a href="../html/member/member_agree.html" class="join">회원가입</a></li>
-                        <li><a href="../html/myhanbit/myhanbit.html" class="myhanbit">마이엔젤</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- //top menu -->
+                <ul class="top_menu">
+                    <li><a href="http://localhost:9999/html/member/login.html" class="login">로그인</a></li>
+                    <li><a href="http://localhost:9999/html/member/member_agree.html" class="join">회원가입</a></li>
+                    <li><a href="http://localhost:9999/html/myhanbit/myhanbit.html" class="myhanbit">마이엔젤</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- //top menu -->
 
-            <div id="wrap_gnb">
-                <!-- logo -->
-                <h1><a href="../index.html">엔젤스터디</a></h1>
-                <!-- //logo -->
+        <div id="wrap_gnb">
+            <!-- logo -->
+            <h1><a href="../index.html">엔젤스터디</a></h1>
+            <!-- //logo -->
 
-                <!-- Menu -->
-                <div id="gnb" name="gnb">
-                    <ul>
-                        <li><a href="../html/brand/brand_submain.html" class="">BRAND</a></li>
-                        <li><a href="../html/channel/channel_submain.html" class="">Channel.H</a></li>
-                        <li><a href="../html/support/help_info.html" class="">SUPPORT</a></li>
-                        <li><a href="../html/event/current/current_event_list.html" class="">EVENT</a></li>
+            <!-- Menu -->
+            <div id="gnb" name="gnb">
+                <ul>
+                    <li><a href="http://localhost:9999/html/brand/brand_submain.html" class="">BRAND</a></li>
+                    <li><a href="http://localhost:9999/html/channel/channel_submain.html" class="">Channel.H</a></li>
+                    <li><a href="http://localhost:9999/html/support/help_info.html" class="">SUPPORT</a></li>
+                    <li><a href="http://localhost:9999/html/event/current/current_event_list.html" class="">EVENT</a></li>
 
-                        <li id="top_search" class="search"><a href="javascript:;" onClick="view_hover('main_search_area','','show'); $('#keyword_str').focus();"><span>SERACH</span></a></li>
-                    </ul>
-                </div>
-                <!-- //Menu -->
+                    <li id="top_search" class="search"><a href="javascript:;" onClick="view_hover('main_search_area','','show'); $('#keyword_str').focus();"><span>SERACH</span></a></li>
+                </ul>
+            </div>
+            <!-- //Menu -->
 
                 <!-- lnb -->
                 <div class="lnb" style="top:92px;">
@@ -234,14 +234,38 @@
             // 검색 리스트
             function sch_smit() {
 
-                if (!$.trim($("#keyword_str").val()).length) {
-                    alert("검색어를 입력해주세요");
-                    $("#keyword_str").focus();
-                    return false;
-                } else {
-                    $("#gnbsearchfrm").attr("action", "../html/search/search_list.html");
-                    $("#gnbsearchfrm").submit();
+            //카테고리선택 >> 하위카테고리 데이터 정보
+            var depth_html = "";
+            $.ajax({
+                type: "post",
+                url: "/inc/common_top_search_ajax.php",
+                data: {
+                    depth_attr: str,
+                    cate_cd: cate_cd
+                },
+                dataType: "json",
+                success: function(response) {
+
+                    response = JSON.stringify(response);
+                    $.each($.parseJSON(response), function(idx, obj) {
+                        depth_html += '<li id="' + obj.cate_cd + '" name="' + str + '" onMouseOver="javascript:depth_list(\'' + cate_str + '\', \'' + obj.cate_cd + '\',\'\');"><a href="http://localhost:9999/html/store/books/category_list.html?cate_cd=' + obj.cate_cd + '">' + obj.cate_nm + '</a></li>';
+                    });
+                    $("#" + str + "_depth").html("");
+                    $("#" + str + "_depth").html(depth_html);
                 }
+            });
+        }
+
+        // 검색 리스트
+        function sch_smit() {
+
+            if (!$.trim($("#keyword_str").val()).length) {
+                alert("검색어를 입력해주세요");
+                $("#keyword_str").focus();
+                return false;
+            } else {
+                $("#gnbsearchfrm").attr("action", "http://localhost:9999/html/search/search_list.html");
+                $("#gnbsearchfrm").submit();
             }
         </script>
         <!-- //메인 검색 및 카테고리 영역 -->
@@ -294,10 +318,43 @@
                 $("#main_popup").css('display', 'none');
             }
 
-            function closeTodayPopup() {
-                setCookie('HANBIT_MAIN_POP', 'Y', 24);
-                $("#main_popup").css('display', 'none');
-            }
+    </script>
+    <!-- //메인 레이어팝업 컨트롤 영역 -->
+    <!-- 프로모션 -->
+    <section id="main_top_box" name="main_top_box">
+        <div class="main_promotion_bg">
+            <article onmouseover="view_hover('main_promotion_btn','','show')" onmouseout="view_hover('main_promotion_btn','','hide')">
+                <div class="promo_top">
+                    <div id="touchSlider_promo">
+                        <ul style="width:100% !important;">
+
+                            <!-- 여기 li에 백그라운드 생상코드가 들어가면 됩니다. -->
+                            <li style="background-color:#05294b;">
+                                <a href="http://localhost:9999/html/event/current/current_event_view.html?hbe_idx=59&page=0" target="_self"><img src="../data/banner/block_1.png" width="" height="340" alt="[리얼타임 TALK 01] 비즈니스 블록체인"></a>
+                            </li>
+
+                            <!-- 여기 li에 백그라운드 생상코드가 들어가면 됩니다. -->
+                            <li style="background-color:#e2e3e0;">
+                                <a href="http://localhost:9999/html/store/books/look.php?p_code=B3835033636" target="_self"><img src="../data/banner/main_170810_web.png" width="" height="340" alt="make 드론"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="main_promotion_btn" class="btn_promo_area">
+                        <div class="btn_promo_left">
+                            <a href="javascript:;" class="btn_promo_prev"></a>
+                        </div>
+                        <div class="btn_promo_right">
+                            <a href="javascript:;" class="btn_promo_next"></a>
+                        </div>
+                    </div>
+                    <div class="btn_promo_area_page" style="text-align:center;">
+                        <div class="btn_promo_page">paging</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- //프로모션 -->
 
             //레이어 팝업 설정
             function setCookie(name, value, expirehours) {
@@ -306,53 +363,118 @@
                 document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";domain=.hanbit.co.kr;"
             }
 
-            function getCookie(name) {
-                var cName = name + "=";
-                var x = 0;
-                while (i <= document.cookie.length) {
-                    var y = (x + cName.length);
-                    if (document.cookie.substring(x, y) == cName) {
-                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
-                            endOfCookie = document.cookie.length;
-                        return unescape(document.cookie.substring(y, endOfCookie));
-                    }
-                    x = document.cookie.indexOf(" ", x) + 1;
-                    if (x == 0) break;
-                }
-                return "";
-            }
-        </script>
-        
+                <div id="touchSlider_top_network">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9999/html/event/current/current_event_view.html?hbe_idx=58&page=0" target="_self"><img src="../data/banner/banner_1.png"></a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9999/html/store/books/look.php?p_code=B9924952185" target="_self"><img src="../data/banner/ba1.png"></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self"><img src="../data/banner/free_570.png"></a>
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- 실제 바디(정보영역) -->
+                <div id="main_top_network_btn" class="btn_top_network_area">
+                    <div class="btn_top_network_left">
+                        <a href="javascript:;" class="btn_top_network_prev"></a>
+                    </div>
+                    <div class="btn_top_network_right">
+                        <a href="javascript:;" class="btn_top_network_next"></a>
+                    </div>
+                </div>
+                <div class="btn_top_network_area_page" style="text-align:center;">
+                    <div class="btn_top_network_page">paging</div>
+                </div>
+            </div>
+        </article>
+        <!-- //네트워크 -->
 
+        <!-- 배너 -->
+        <article class="main_banner">
+            <div class="txt">
+                <p>
+                    <a href="http://localhost:9999/html/publisher/write.html?lang=k" target="_blank">
+                        <strong>기획/원고 모집</strong><br>
+                        <span class="icon_plan"></span><br>
+                        <em>참신한 아이디어와 역량있는<br>저자/역자분들을 모십니다.</em>
+                    </a>
+                </p>
+            </div>
+        </article>
 
+        <article class="main_banner">
+            <div class="txt">
+                <p>
+                    <a href="http://localhost:9999/html/academy/professor/index.html">
+                        <strong>교수전용</strong><br>
+                        <span class="icon_professor"></span><br>
+                        <em>교재로 채택하신 교수님께<br>교안/보조자료를 제공합니다.</em>
+                    </a>
+                </p>
+            </div>
+        </article>
 
-        <!-- 푸터 -->
-        <footer>
-            <!-- 공지사항 -->
-            <div class="foot_notice">
-                <span>
+        <article class="main_banner">
+            <div class="txt">
+                <p>
+                    <a href="http://localhost:9999/html/support/supplement_list.html">
+                        <strong>자료실</strong><br>
+                        <span class="icon_sorce"></span><br>
+                        <em>한빛 도서의 부록/예제소스를<br>다운로드하실 수 있습니다.</em>
+                    </a>
+                </p>
+            </div>
+        </article>
+        <!-- //배너 -->
+    </section>
+    <!-- //메인 상단 영역 -->
+
+ <!-- 실제 바디(정보영역) -->
+
+    <!-- 로드맵 및 저자 -->
+    <div class="roadmap_box_area">
+        <div class="roadmap_area">
+            <div class="roadmap_area_l">
+                <!-- 타이틀 -->
+                <div class="roadmap_area_l_tit">학습 로드맵</div>
+                <!-- //타이틀 -->
+
+                <div class="roadmap_area_thumb">
+                    <a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self"><img src="../data/banner/brain.jpg"></a>
+                </div>
+                <div class="roadmap_area_info">
+                    <p><a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self">[개앞맵시] 스카이넷도 딥러닝부터</a></p>
+                    <div class="btn"><a href="http://localhost:9999/html/media/books/road_map.html?rm_idx=5" target="_self">바로가기 <span>&gt;</span></a></div>
+                </div>
+            </div>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <!-- 공지사항 -->
+        <div class="foot_notice">
+            <span>
 			NOTICE :
 		</span>
 
-                <a href="../support/notice_view.html?hnb_idx=261">엔젤스터디 사이트 제작 안내</a>
-            </div>
-            <!-- //공지사항 -->
+            <a href="../support/notice_view.html?hnb_idx=261">엔젤스터디 사이트 제작 안내</a>
+        </div>
+        <!-- //공지사항 -->
 
-            <div class="foot_contents">
-                <!-- 하단 메뉴 -->
-                <div class="foot_menu">
-                    <!-- added by coffin -->
-                    <ul>
-                        <li><a href="../html/publisher/index.html">회사소개</a> &#149; <a href="http://www.hanbit.co.kr/publisher/index.html?lang=e">ENGLISH</a></li>
-                        <li><a href="../html/publisher/write.html" target="_blank">기획 및 원고 모집</a></li>
-                        <li><a href="../html/member/use_agreement.html">이용약관</a></li>
-                        <li><a href="../html/member/privacy_policy.html"><strong>개인정보취급방침</strong></a></li>
-                        <li><a href="../html/sitemap/sitemap.html">사이트맵</a></li>
-                    </ul>
-                </div>
-                <!-- //하단 메뉴 -->
+        <div class="foot_contents">
+            <!-- 하단 메뉴 -->
+            <div class="foot_menu">
+                <!-- added by coffin -->
+                <ul>
+                    <li><a href="http://localhost:9999/html/publisher/index.html">회사소개</a> &#149; <a href="http://www.hanbit.co.kr/publisher/index.html?lang=e">ENGLISH</a></li>
+                    <li><a href="http://localhost:9999/html/publisher/write.html" target="_blank">기획 및 원고 모집</a></li>
+                    <li><a href="http://localhost:9999/html/member/use_agreement.html">이용약관</a></li>
+                    <li><a href="http://localhost:9999/html/member/privacy_policy.html"><strong>개인정보취급방침</strong></a></li>
+                    <li><a href="http://localhost:9999/html/sitemap/sitemap.html">사이트맵</a></li>
+                </ul>
+            </div>
 
                 <!-- SNS -->
                 <div class="foot_sns">
@@ -384,9 +506,9 @@
                             });
                         });
 
-                        function foot_sch_smit() {
-                            var foot_keyword_str = $("#foot_keyword_str").val();
-                            var searchUrl = "../html/search/search_list.html?foot_keyword_str=" + foot_keyword_str;
+                    function foot_sch_smit() {
+                        var foot_keyword_str = $("#foot_keyword_str").val();
+                        var searchUrl = "http://localhost:9999/html/search/search_list.html?foot_keyword_str=" + foot_keyword_str;
 
                             if (!foot_keyword_str) {
                                 alert("검색어를 입력해주세요");
@@ -414,10 +536,10 @@
                 <!-- //스터디 정보 -->
             </div>
 
-            <div class="copyright">&copy;2017- Angelstudy Publishing Network, Inc. All rights reserved.</div>
-        </footer>
-        <!-- //푸터 -->
-        <div class="foot_download_btn"><a href="../html/support/supplement_list.html">자료실</a></div>
+        <div class="copyright">&copy;2017- Angelstudy Publishing Network, Inc. All rights reserved.</div>
+    </footer>
+    <!-- //푸터 -->
+    <div id="reference_room" class="foot_download_btn"><a href="http://localhost:9999/html/support/supplement_list.html">자료실</a></div>
 
         <!-- 공통 JS 호출 -->
         <script type="text/javascript" src="../js/common.js"></script>
