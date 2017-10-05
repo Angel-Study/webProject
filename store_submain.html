@@ -35,6 +35,8 @@
     <script type="text/javascript" src="../lib/cheditor/cheditor.js?v=<%=System.currentTimeMillis() %>"></script>
     <script type="text/javascript" src="../js/jquery.ui.datepicker-ko.js?v=<%=System.currentTimeMillis() %>"></script>
     <script type="text/javascript" src="../js/engine.js?v=<%=System.currentTimeMillis() %>"></script>
+    <!-- button 관련 css 라이브러리 -->
+    <link rel="stylesheet" href="data/buttons/css/buttons.css" />
 
     <!-- Start of help Widget script -->
     <script>
@@ -130,212 +132,33 @@
         </header>
         <!-- //header -->
 
-        <!-- 메인 검색 및 카테고리 영역 -->
-        <div id="main_search_area" class="fixed" style="display:none;">
-            <div class="msa_wrap">
-                <div class="msa_wrap_btn"><a href="javascript:;" onClick="view_hover('main_search_area','','hide')">닫기</a></div>
-
-                <!-- [S]카테고리 -->
-                <div class="msa_wrap_l">
-                    <!-- 카테고리 노출 -->
-                    <p class="tit">카테고리</p>
-                    <ul class="cate_1depth" id="cate1_depth"></ul>
-                    <ul class="cate_3depth" id="cate2_depth"></ul>
-                </div>
-                <!-- [E]//카테고리 -->
-
-
-                <!-- [S]검색 -->
-                <div class="msa_wrap_r">
-                    <p class="txt">제목, 저자, ISBN으로 검색이 가능합니다.</p>
-                    <!-- 검색창 -->
-                    <form name="gnbsearchfrm" id="gnbsearchfrm" method="get" onload="form.keyword_str.focus;">
-
-                        <!-- 선택 카테고리 결과값 -->
-                        <div class="msa_wrap_r_srch">
-                            <fieldset>
-                                <legend>검색영역</legend>
-                                <input title="검색어" class="srch_keyword" accesskey="s" type="text" name="keyword_str" id="keyword_str">
-                                <input type="submit" alt="" class="srch_btn" onclick="sch_smit();" style="cursor:pointer;">
-                            </fieldset>
-                        </div>
-                    </form>
-                    <!-- //검색창 -->
-
-                </div>
-                <!-- [E]//검색 -->
-
-            </div>
-        </div>
-
-        <style>
-            .normal_css {
-                font-weight: normal;
-            }
-            
-            .bold_css {
-                font-weight: bold;
-            }
-        </style>
-
-
-        <script type="text/javascript">
-            //[뎁스1] 브랜드 리스트
-            $(document).ready(function() {
-                depth_list("cate1");
-            });
-
-            // 카테고리 리스트
-            function depth_list(str, cate_cd) {
-                var cate_str;
-
-                if (str == "cate1") cate_str = "cate2";
-                else cate_str = "choice";
-
-
-                //카테고리1 선택
-                if (str == "cate2") {
-                    $("li[name='cate1']").removeClass("bold_css");
-                    $("#" + cate_cd).addClass("bold_css");
-                    $("#sch_cate1").val(cate_cd);
-                    $("#sch_cate2").val("");
-                }
-
-                //카테고리2 선택
-                if (str == "choice") {
-                    $("li[name='cate2']").removeClass("bold_css");
-                    $("#" + cate_cd).addClass("bold_css");
-                    $("#sch_cate2").val(cate_cd);
-                }
-
-
-                //카테고리선택 >> 하위카테고리 데이터 정보
-                var depth_html = "";
-                $.ajax({
-                    type: "post",
-                    url: "/inc/common_top_search_ajax.php",
-                    data: {
-                        depth_attr: str,
-                        cate_cd: cate_cd
-                    },
-                    dataType: "json",
-                    success: function(response) {
-
-                        response = JSON.stringify(response);
-                        $.each($.parseJSON(response), function(idx, obj) {
-                            depth_html += '<li id="' + obj.cate_cd + '" name="' + str + '" onMouseOver="javascript:depth_list(\'' + cate_str + '\', \'' + obj.cate_cd + '\',\'\');"><a href="../html/store/books/category_list.html?cate_cd=' + obj.cate_cd + '">' + obj.cate_nm + '</a></li>';
-                        });
-                        $("#" + str + "_depth").html("");
-                        $("#" + str + "_depth").html(depth_html);
-                    }
-                });
-            }
-
-            // 검색 리스트
-            function sch_smit() {
-
-                if (!$.trim($("#keyword_str").val()).length) {
-                    alert("검색어를 입력해주세요");
-                    $("#keyword_str").focus();
-                    return false;
-                } else {
-                    $("#gnbsearchfrm").attr("action", "../html/search/search_list.html");
-                    $("#gnbsearchfrm").submit();
-                }
-            }
-        </script>
-        <!-- //메인 검색 및 카테고리 영역 -->
-        <link rel="stylesheet" href="http://www.hanbit.co.kr/css/main.css" />
-        <!-- 메인 레이어팝업 컨트롤 영역 -->
-        <style>
-            #main_popup {
-                position: fixed;
-                top: 149px;
-                left: 50%;
-                margin: 0 0 0 -285px;
-                z-index: 10000;
-            }
-            /* margin : 이미지 가로사이즈의 1/2 값을 뺀다. (예시/ 가로 400사이즈 : margin:0 0 0 -200px;) */
-            
-            .main_popup_img {
-                position: relative;
-            }
-            
-            .main_popup_img img {
-                border: 4px solid #222;
-            }
-            
-            .main_popup_btn a {
-                display: block;
-                position: absolute;
-                top: -40px;
-                right: 0;
-                width: 40px;
-                height: 40px;
-                background: #222;
-                font-size: 32px;
-                font-weight: bold;
-                color: #fff;
-                line-height: 40px;
-                text-align: center;
-            }
-        </style>
-
-        <div id="main_popup">
-            <div class="main_popup_img">
-
-            </div>
-            <!-- <div class="main_popup_btn"><a href="javascript:;" onClick="closeTodayPopup();">X</a></div> -->
-        </div>
-
-        <script type="text/javascript">
-            var cookiedata = document.cookie;
-            if (cookiedata.indexOf("HANBIT_MAIN_POP=Y") > 0) {
-                $("#main_popup").css('display', 'none');
-            }
-
-            function closeTodayPopup() {
-                setCookie('HANBIT_MAIN_POP', 'Y', 24);
-                $("#main_popup").css('display', 'none');
-            }
-
-            //레이어 팝업 설정
-            function setCookie(name, value, expirehours) {
-                var todayDate = new Date();
-                todayDate.setHours(todayDate.getHours() + expirehours);
-                document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";domain=.hanbit.co.kr;"
-            }
-
-            function getCookie(name) {
-                var cName = name + "=";
-                var x = 0;
-                while (i <= document.cookie.length) {
-                    var y = (x + cName.length);
-                    if (document.cookie.substring(x, y) == cName) {
-                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
-                            endOfCookie = document.cookie.length;
-                        return unescape(document.cookie.substring(y, endOfCookie));
-                    }
-                    x = document.cookie.indexOf(" ", x) + 1;
-                    if (x == 0) break;
-                }
-                return "";
-            }
-        </script>
-        
-
         <!-- 실제 바디(정보영역) -->
-        <div id="new_book_list"></div>
-        <script> $("#new_book_list").load("html/store/books/new_book_list.html");
+       <div id="new_book_list"></div>
+        <script> 
+            $("#new_book_list").load("html/store/books/new_book_list.html");
+        </script>
+        <div id="bestseller_list"></div>
+        <script>
+            $("#bestseller_list").load("html/store/books/bestseller_list.html");
+        </script>
+        <div id="edu_view"></div>
+        <script>
+            $("#edu_view").load("html/store/education/edu_view.html");
+        </script>
+        <div id="itemNmaker"></div>
+        <script>
+            $("#itemNmaker").load("html/store/education/edu_list.html");
         </script>
         <!-- 푸터 -->
+        <style>
+            footer {
+                top:1800px;    
+            }
+        </style>
         <footer>
             <!-- 공지사항 -->
             <div class="foot_notice">
-                <span>
-            NOTICE :
-        </span>
-
+                <span>NOTICE :</span>
                 <a href="../support/notice_view.html?hnb_idx=261">엔젤스터디 사이트 제작 안내</a>
             </div>
             <!-- //공지사항 -->

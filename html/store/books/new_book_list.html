@@ -58,12 +58,11 @@
 <!-- new_book_list start -->
 <style>
     #body_content {
-       position: relative;
+        position: relative;
         top:169px;
-       width: 1140px;
-        height: 300px;
-        margin: 30px auto;
-        background-color: aliceblue;
+        width: 1140px;
+        height: 100%;
+        margin: 0 auto;
     }
     #new_book_area {
         position: absolute;
@@ -76,36 +75,139 @@
         display: table-cell;
     }
     #nba_head_title {
+        font-size: 20px;
         float: left;
-        width: 500px;
+        width: 560px;
     }
     #nba_head_book_page_btn {
         float: left;
-        width: 590px;
+        width: 450px;
+    }
+    .book_page_btn {
+        display: inline-block;
+        width: 10px;
+        height:10px;
+        background-color: #d1d4d4;
+        margin: 15px 1px;
+        border-radius: 10px;
+        text-indent: -9999px;
+    }
+    .page_on {
+        background-color: #00afa0;
     }
     #nba_head_more_btn {
         float: left;
+        display: inline;
+        border-radius: 10px;
+    }
+</style>
+<style>
+    #nba_view_list {
+        margin-top: 20px;
+    }
+    .nba_view_box {
+        display: inline-block;
+        width: 220px;
+        height: 400px;
+    }
+    .nba_view_box_thumb {
+        border: 1px solid rgba(0,0,0,0.2);
+        margin: 0 auto;
+        width: 180px;
+        height: 260px;
+    }
+    .nba_view_box_thumb img {
+        width: 100%;
+        height: 100%;
+    }
+    .nba_view_box_info {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
     }
 </style>
 <div id="body_content">
-    <section id="new_book_area">
-      <div id="nba_head">
-          <div id="nba_head_title">
-              새로나온 책
-          </div>
-          <div id="nba_head_book_page_btn">
-              <span class="book_page_btn">O</span>
-              <span class="book_page_btn">O</span>
-              <span class="book_page_btn">O</span>
-              <span class="book_page_btn">O</span>
-          </div>
-          <div id="nba_head_more_btn">
-              more+
-          </div>
-      </div>
-        <div id="new_book_thumbnail_list">
-
+    <div id="new_book_area">
+        <div id="nba_head">
+            <div id="nba_head_title">
+                새로나온 책
+            </div>
+            <div id="nba_head_book_page_btn">
+                <div class="book_page_btn page_on">paging</div>
+                <div class="book_page_btn">paging</div>
+                <div class="book_page_btn">paging</div>
+                <div class="book_page_btn">paging</div>
+            </div>
+            <a href="#" id="nba_head_more_btn" class="button button-rounded" >more +</a>
         </div>
-    </section>
+        <div id="nba_view_list">
+            <div class="nba_view_box">
+                <div class="nba_view_box_thumb">
+                    <img src="/data/images/book.jpg" alt="">
+                </div>
+                <div class="nba_view_box_info">
+                    <div class="nba_vb_info_title">
+                        모던 웹을 위한 Node.js 프로그래밍
+                    </div>
+                    <div class="nba_vb_info_author">
+                        윤성우
+                    </div>
+                </div>
+            </div>
+            <div class="nba_view_box">
+                <div class="nba_view_box_thumb">
+                    <img src="/data/images/book.jpg" alt="">
+                </div>
+                <div class="nba_view_box_info">
+                    <div class="nba_vb_info_title">
+                        모던 웹을 위한 Node.js 프로그래밍
+                    </div>
+                    <div class="nba_vb_info_author">
+                        윤성우
+                    </div>
+                </div>
+            </div>
+            <div class="nba_view_box">
+                <div class="nba_view_box_thumb">
+                    <img src="/data/images/book.jpg" alt="">
+                </div>
+                <div class="nba_view_box_info">
+                    <div class="nba_vb_info_title">
+                        모던 웹을 위한 Node.js 프로그래밍
+                    </div>
+                    <div class="nba_vb_info_author">
+                        윤성우
+                    </div>
+                </div>
+            </div>
+            <div class="nba_view_box">
+                <div class="nba_view_box_thumb">
+                    <img src="/data/images/book.jpg" alt="">
+                </div>
+                <div class="nba_view_box_info">
+                    <div class="nba_vb_info_title">
+                        모던 웹을 위한 Node.js 프로그래밍
+                    </div>
+                    <div class="nba_vb_info_author">
+                        윤성우
+                    </div>
+                </div>
+            </div>
+            <div class="nba_view_box">
+                <div class="nba_view_box_thumb">
+                    <img src="/data/images/book.jpg" alt="">
+                </div>
+                <div class="nba_view_box_info">
+                    <div class="nba_vb_info_title">
+                        모던 웹을 위한 Node.js 프로그래밍
+                    </div>
+                    <div class="nba_vb_info_author">
+                        윤성우
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- new_book_list end -->
